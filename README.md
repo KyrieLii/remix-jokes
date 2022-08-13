@@ -51,3 +51,21 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+
+
+## Prisma
+
+```sh
+npx prisma init --datasource-provider sqlite 
+
+npx prisma db push   
+
+node --require esbuild-register prisma/seed.ts  
+
+```
+
+DATABASE_URL
+```sh file=".env"
+DATABASE_URL="file:./dev.db"
+``
